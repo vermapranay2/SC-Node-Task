@@ -9,6 +9,8 @@ var sharp = require('sharp')
 
 var app = express();
 
+module.exports = app
+
 app.use(bodyParser.json())
 
 

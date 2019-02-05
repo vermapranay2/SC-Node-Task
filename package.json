@@ -4,17 +4,25 @@
   "description": "socialcops task",
   "main": "app.js",
   "scripts": {
-    "test": "npm start"
+    "start": "node app.js",
+    "test": "mocha"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "chai-http": "^4.2.1",
     "express": "^4.16.4",
     "jsonpatch": "^3.0.1",
     "jsonwebtoken": "^8.4.0",
     "loadash": "^1.0.0",
+    "mocha": "^5.2.0",
     "npm": "^6.7.0",
     "sharp": "^0.21.3"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "should": "^13.2.3"
   }
 }
