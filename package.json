@@ -1,0 +1,19 @@
+{
+  "name": "scnodetask",
+  "version": "1.0.0",
+  "description": "socialcops task",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "jsonpatch": "^3.0.1",
+    "jsonwebtoken": "^8.4.0",
+    "loadash": "^1.0.0",
+    "npm": "^6.7.0"
+  }
+}
