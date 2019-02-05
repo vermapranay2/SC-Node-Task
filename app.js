@@ -10,10 +10,9 @@ var sharp = require('sharp')
 var app = express();
 
 module.exports = app
-
 app.use(bodyParser.json())
 
-
+//login api 
 app.post('/task/login', (req, res) => {
     // Mock user
     user={}
@@ -44,6 +43,7 @@ app.post('/task/login', (req, res) => {
     
 });
 
+//jsonpatch api
 app.post('/task/patch',verifyToken,  (req, res) => {
     
     if(!_.isEmpty(req.body)){
@@ -73,6 +73,8 @@ app.post('/task/patch',verifyToken,  (req, res) => {
     }
     
     });
+
+//thumbnail api 
 app.post('/task/thumbnail',verifyToken, (req,res)=>{
     
     if(!_.isEmpty(req.body)){
@@ -127,23 +129,16 @@ app.post('/task/thumbnail',verifyToken, (req,res)=>{
 
     });
 
-    
+    //token verification middleware
     function verifyToken(req, res, next) {
-    // Get auth header value
         const bearerHeader = req.headers['authorization'];
-    // Check if bearer is undefined
         if(typeof bearerHeader !== 'undefined') {
-      // Split at the space
             const bearer = bearerHeader.split(' ');
-      // Get token from array
             const bearerToken = bearer[1];
-      // Set the token
             req.token = bearerToken;
-      // Next middleware
             next();
         } 
         else {
-      // Forbidden
             res.sendStatus(403);
         }
   
