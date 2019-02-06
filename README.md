@@ -67,7 +67,15 @@ Body
 }
 
 ```
-## To run testcases
+## Running natively
+```console
+npm install
+```
+To start server 
+```console
+npm start
+```
+To run test suit  
 ```console
 npm test
 ```
